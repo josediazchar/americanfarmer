@@ -1,135 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LanguageWrapper from '../components/LanguageWrapper';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import HomeSections from '../components/HomeSections';
 import Footer from '../components/Footer';
-import ProductCard from '../components/ProductCard';
 import '../styles/global.css';
-
-const featuredProducts = [
-  {
-    name: "Banano Premium Cavendish",
-    description: "Cultivados en el clima ideal colombiano, nuestros Bananos Premium ofrecen un sabor únicamente dulce y suave con una textura cremosa y libre de fibras. Cosechados para una presentación fresca y firme, son un verdadero sabor de calidad.",
-    image: "/banano.png",
-    characteristics: ["Sabor dulce y suave", "Textura cremosa", "Libre de fibras", "Presentación fresca y firme"],
-    scientificName: "Musa Acuminata",
-    origin: "Colombia"
-  },
-  {
-    name: "Piña Dorada MD2",
-    description: "Experimente la dulzura excepcional de nuestra Piña Dorada MD2. Con un nivel de brix superior a 12 en la cosecha, esta fruta es increíblemente jugosa con una textura tierna y brillante y un aroma fresco y afrutado.",
-    image: "/pina.png",
-    characteristics: ["Brix superior a 12", "Increíblemente jugosa", "Textura tierna y brillante", "Aroma fresco y afrutado"],
-    scientificName: "Ananas Comosus",
-    origin: "Colombia"
-  },
-  {
-    name: "Plátano Hartón",
-    description: "Un alimento básico versátil, nuestros Plátanos Hartón son conocidos por su textura firme y sabor sutilmente dulce. Perfectos para una variedad de usos culinarios, se cosechan frescos y están libres de imperfecciones.",
-    image: "/platano2.jpeg",
-    characteristics: ["Textura firme", "Sabor sutilmente dulce", "Versátil para cocina", "Libre de imperfecciones"],
-    scientificName: "Musa Paradisiaca",
-    origin: "Colombia"
-  },
-  {
-    name: "Lima Tahití",
-    description: "Nuestras Limas Tahití ofrecen un sabor característico ácido y cítrico perfecto para bebidas, cocina y más. Con un color verde vibrante y forma ovalada clásica, son un referente de calidad en cítricos.",
-    image: "/limon.png",
-    characteristics: ["Sabor ácido característico", "Color verde vibrante", "Forma ovalada clásica", "Perfecta para bebidas y cocina"],
-    scientificName: "Citrus Latifolia",
-    origin: "Colombia"
-  }
-];
 ---
 
 <Layout title="American Farmers - Frutas Colombianas Premium para el Mundo">
-  <Navbar client:load />
-  
-  <main>
-    <!-- Hero Section -->
-    <Hero client:load />
+  <LanguageWrapper client:load>
+    <Navbar client:load />
     
-    <!-- Introduction Section -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Calidad y Compromiso desde Colombia hacia Usted
-          </h2>
-          <p class="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            American Farmers se dedica a llevar las mejores frutas frescas desde los campos colombianos hasta el mercado internacional. Estamos comprometidos con la excelencia, proporcionando productos de calidad superior mientras promovemos prácticas sociales y ambientales sostenibles.
-          </p>
-        </div>
-        
-        <!-- Stats Section -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-r from-red-600 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">Calidad Certificada</h3>
-            <p class="text-gray-600">Productos que cumplen con los más altos estándares internacionales</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">Exportación Global</h3>
-            <p class="text-gray-600">Llevamos la frescura colombiana a mercados internacionales</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-r from-green-600 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">Compromiso Social</h3>
-            <p class="text-gray-600">Promovemos prácticas sostenibles y desarrollo social</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <main>
+      <!-- Hero Section -->
+      <Hero client:load />
+      
+      <!-- Home Sections with translations -->
+      <HomeSections client:load />
+    </main>
     
-    <!-- Featured Products Section -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Nuestra Selección Premium
-          </h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            Descubra la calidad excepcional de nuestras frutas colombianas, cuidadosamente seleccionadas y preparadas para el mercado internacional.
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
-          {featuredProducts.map((product) => (
-            <ProductCard
-              client:load
-              name={product.name}
-              description={product.description}
-              image={product.image}
-              characteristics={product.characteristics}
-              scientificName={product.scientificName}
-              origin={product.origin}
-            />
-          ))}
-        </div>
-        
-        <div class="text-center">
-          <a href="/products" class="btn-primary text-lg px-8 py-4">
-            Ver Todos los Productos
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-  
-  <Footer client:load />
+    <Footer client:load />
+  </LanguageWrapper>
 </Layout>
