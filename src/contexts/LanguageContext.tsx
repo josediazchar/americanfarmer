@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 // Tipos para las traducciones
@@ -274,9 +274,58 @@ const translations = {
 // Contexto
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+// Función para detectar el idioma del navegador
+const detectBrowserLanguage = (): Language => {
+  if (typeof window === 'undefined') return 'es'; // SSR fallback
+  
+  const browserLang = navigator.language || navigator.languages?.[0] || 'es';
+  
+  // Si el navegador está en inglés, usar inglés; de lo contrario, español
+  if (browserLang.toLowerCase().startsWith('en')) {
+    return 'en';
+  }
+  return 'es';
+};
+
+// Función para obtener el idioma guardado o detectar automáticamente
+const getInitialLanguage = (): Language => {
+  if (typeof window === 'undefined') return 'es'; // SSR fallback
+  
+  try {
+    const savedLanguage = localStorage.getItem('american-farmers-language');
+    if (savedLanguage && (savedLanguage === 'es' || savedLanguage === 'en')) {
+      return savedLanguage as Language;
+    }
+  } catch (error) {
+    console.warn('Error accessing localStorage:', error);
+  }
+  
+  // Si no hay idioma guardado, detectar automáticamente
+  return detectBrowserLanguage();
+};
+
 // Provider
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('es');
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+
+  // Función para cambiar idioma y persistirlo
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    
+    try {
+      localStorage.setItem('american-farmers-language', lang);
+    } catch (error) {
+      console.warn('Error saving language to localStorage:', error);
+    }
+  };
+
+  // Efecto para cargar el idioma al montar el componente
+  useEffect(() => {
+    const initialLang = getInitialLanguage();
+    if (initialLang !== language) {
+      setLanguageState(initialLang);
+    }
+  }, []);
 
   const t = (key: string): string => {
     return (translations[language] as Record<string, string>)[key] || key;
