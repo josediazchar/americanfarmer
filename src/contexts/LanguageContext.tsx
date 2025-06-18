@@ -8,6 +8,8 @@ export interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  showToast: boolean;
+  setShowToast: (show: boolean) => void;
 }
 
 // Traducciones
@@ -317,10 +319,22 @@ const getInitialLanguage = (): Language => {
 // Provider
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+  const [showToast, setShowToast] = useState(false);
 
   // Función para cambiar idioma y persistirlo
   const setLanguage = (lang: Language) => {
+    const previousLanguage = language;
     setLanguageState(lang);
+    
+    // Solo mostrar toast si el idioma realmente cambió
+    if (previousLanguage !== lang) {
+      setShowToast(true);
+      
+      // Ocultar toast después de 2 segundos
+      setTimeout(() => {
+        setShowToast(false);
+      }, 2000);
+    }
     
     try {
       localStorage.setItem('american-farmers-language', lang);
@@ -342,7 +356,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, showToast, setShowToast }}>
       {children}
     </LanguageContext.Provider>
   );

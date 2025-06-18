@@ -1,28 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const LanguageToast: React.FC = () => {
-  const { language } = useLanguage();
-  const [showToast, setShowToast] = useState(false);
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  useEffect(() => {
-    if (!isInitialized) {
-      // Marcar como inicializado después del primer render
-      setIsInitialized(true);
-      return;
-    }
-
-    // Solo mostrar toast si ya estaba inicializado (cambio real de idioma)
-    setShowToast(true);
-    
-    // Ocultar toast después de 2 segundos
-    const timer = setTimeout(() => {
-      setShowToast(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [language, isInitialized]);
+  const { language, showToast } = useLanguage();
 
   if (!showToast) return null;
 
