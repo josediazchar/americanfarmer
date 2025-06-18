@@ -33,7 +33,23 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            {t('hero.title')}
+            {language === 'es' ? (
+              <>
+                <span className="block">Frutas Colombianas</span>
+                <span className="block text-gradient bg-gradient-to-r from-yellow-400 via-red-500 to-green-500 bg-clip-text text-transparent">
+                  Premium
+                </span>
+                <span className="block">para el Mundo</span>
+              </>
+            ) : (
+              <>
+                <span className="block text-gradient bg-gradient-to-r from-yellow-400 via-red-500 to-green-500 bg-clip-text text-transparent">
+                  Premium
+                </span>
+                <span className="block">Colombian Fruits</span>
+                <span className="block">for the World</span>
+              </>
+            )}
           </h1>
 
           {/* Sub-headline */}

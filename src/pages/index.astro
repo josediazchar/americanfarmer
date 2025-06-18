@@ -1,25 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LanguageWrapper from '../components/LanguageWrapper';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import HomeSections from '../components/HomeSections';
-import Footer from '../components/Footer';
+import HomePage from '../components/HomePage';
 import '../styles/global.css';
 ---
 
 <Layout title="American Farmers - Frutas Colombianas Premium para el Mundo">
-  <LanguageWrapper client:load>
-    <Navbar client:load />
-    
-    <main>
-      <!-- Hero Section -->
-      <Hero client:load />
-      
-      <!-- Home Sections with translations -->
-      <HomeSections client:load />
-    </main>
-    
-    <Footer client:load />
-  </LanguageWrapper>
+  <HomePage client:only="react" />
 </Layout>

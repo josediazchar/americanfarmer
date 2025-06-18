@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { LanguageProvider } from '../contexts/LanguageContext';
 
 interface LanguageWrapperProps {

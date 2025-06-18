@@ -21,9 +21,9 @@ const translations = {
     
     // Hero Section
     'hero.title': 'Frutas Colombianas Premium para el Mundo',
-    'hero.subtitle': 'Conectamos la riqueza tropical de Colombia con mercados internacionales, ofreciendo frutas frescas de la más alta calidad con prácticas sostenibles y responsables.',
+    'hero.subtitle': 'Su socio de confianza en la comercialización y exportación de frutas frescas de alta calidad',
     'hero.cta': 'Descubre Nuestros Productos',
-    'hero.whatsapp': 'Cotizar por WhatsApp',
+    'hero.whatsapp': 'Solicitar Cotización',
     
     // Home - Introduction
     'home.intro.title': 'Calidad y Compromiso desde Colombia hacia Usted',
@@ -101,6 +101,28 @@ const translations = {
     'common.readyToWork': '¿Listo para trabajar con nosotros?',
     'common.discoverPartner': 'Descubra cómo American Farmers puede ser su socio ideal en la importación de frutas colombianas premium.',
     
+    // Products Page
+    'products.title': 'Nuestros Productos',
+    'products.subtitle': 'Frutas colombianas premium seleccionadas cuidadosamente para mercados internacionales',
+    'products.stats.varieties': 'Variedades Premium',
+    'products.stats.colombian': 'Origen Colombiano',
+    'products.stats.support': 'Atención al Cliente',
+    'products.qualityTitle': 'Calidad que Habla por Sí Sola',
+    'products.qualityDescription': 'Cada fruta en nuestro portafolio representa la excelencia de la agricultura colombiana. Trabajamos con los mejores productores del país para garantizar productos que cumplen con los más altos estándares internacionales de calidad, frescura y sabor.',
+    'products.badges.certification.title': 'Certificación Internacional',
+    'products.badges.certification.description': 'Cumplimos con estándares globales de calidad',
+    'products.badges.traceability.title': 'Trazabilidad Completa',
+    'products.badges.traceability.description': 'Seguimiento desde el campo hasta destino',
+    'products.badges.freshness.title': 'Frescura Garantizada',
+    'products.badges.freshness.description': 'Cadena de frío optimizada para máxima calidad',
+    'products.badges.fairTrade.title': 'Comercio Justo',
+    'products.badges.fairTrade.description': 'Apoyamos a productores locales responsablemente',
+    'products.portfolioTitle': 'Portafolio Completo',
+    'products.portfolioDescription': 'Explore nuestra selección completa de frutas colombianas premium, cada una cuidadosamente cultivada y preparada para mercados internacionales.',
+    'products.ctaTitle': '¿Interesado en Nuestros Productos?',
+    'products.ctaDescription': 'Contáctenos hoy mismo para recibir más información sobre nuestras frutas colombianas premium y cómo podemos satisfacer sus necesidades de importación.',
+    'products.whatsappMessage': 'Hola, estoy interesado en conocer más sobre sus productos de frutas colombianas para importación.',
+
     // Page Titles
     'page.home.title': 'American Farmers - Frutas Colombianas Premium para el Mundo',
     'page.about.title': 'Sobre Nosotros - American Farmers',
@@ -116,9 +138,9 @@ const translations = {
     
     // Hero Section
     'hero.title': 'Premium Colombian Fruits for the World',
-    'hero.subtitle': 'We connect Colombia\'s tropical richness with international markets, offering the highest quality fresh fruits with sustainable and responsible practices.',
+    'hero.subtitle': 'Your trusted partner in the commercialization and export of high-quality fresh fruits',
     'hero.cta': 'Discover Our Products',
-    'hero.whatsapp': 'Get Quote via WhatsApp',
+    'hero.whatsapp': 'Request Quote',
     
     // Home - Introduction
     'home.intro.title': 'Quality and Commitment from Colombia to You',
@@ -196,6 +218,28 @@ const translations = {
     'common.readyToWork': 'Ready to work with us?',
     'common.discoverPartner': 'Discover how American Farmers can be your ideal partner in importing premium Colombian fruits.',
     
+    // Products Page
+    'products.title': 'Our Products',
+    'products.subtitle': 'Premium Colombian fruits carefully selected for international markets',
+    'products.stats.varieties': 'Premium Varieties',
+    'products.stats.colombian': 'Colombian Origin',
+    'products.stats.support': 'Customer Support',
+    'products.qualityTitle': 'Quality that Speaks for Itself',
+    'products.qualityDescription': 'Each fruit in our portfolio represents the excellence of Colombian agriculture. We work with the best producers in the country to guarantee products that meet the highest international standards of quality, freshness and flavor.',
+    'products.badges.certification.title': 'International Certification',
+    'products.badges.certification.description': 'We comply with global quality standards',
+    'products.badges.traceability.title': 'Complete Traceability',
+    'products.badges.traceability.description': 'Tracking from field to destination',
+    'products.badges.freshness.title': 'Guaranteed Freshness',
+    'products.badges.freshness.description': 'Optimized cold chain for maximum quality',
+    'products.badges.fairTrade.title': 'Fair Trade',
+    'products.badges.fairTrade.description': 'We support local producers responsibly',
+    'products.portfolioTitle': 'Complete Portfolio',
+    'products.portfolioDescription': 'Explore our complete selection of premium Colombian fruits, each one carefully cultivated and prepared for international markets.',
+    'products.ctaTitle': 'Interested in Our Products?',
+    'products.ctaDescription': 'Contact us today to receive more information about our premium Colombian fruits and how we can meet your import needs.',
+    'products.whatsappMessage': 'Hello, I am interested in learning more about your Colombian fruit products for import.',
+
     // Page Titles
     'page.home.title': 'American Farmers - Premium Colombian Fruits for the World',
     'page.about.title': 'About Us - American Farmers',
