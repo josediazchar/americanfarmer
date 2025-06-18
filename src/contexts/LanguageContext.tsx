@@ -22,10 +22,12 @@ const translations = {
     'nav.contact': 'Contacto',
     
     // Hero Section
+    'hero.badge': 'Exportadores Certificados desde Colombia',
     'hero.title': 'Frutas Colombianas Premium para el Mundo',
     'hero.subtitle': 'Su socio de confianza en la comercialización y exportación de frutas frescas de alta calidad',
     'hero.cta': 'Descubre Nuestros Productos',
     'hero.whatsapp': 'Solicitar Cotización',
+    'hero.guarantee': 'Respuesta rápida garantizada',
     
     // Home - Introduction
     'home.intro.title': 'Calidad y Compromiso desde Colombia hacia Usted',
@@ -156,10 +158,12 @@ const translations = {
     'nav.contact': 'Contact',
     
     // Hero Section
+    'hero.badge': 'Certified Exporters from Colombia',
     'hero.title': 'Premium Colombian Fruits for the World',
     'hero.subtitle': 'Your trusted partner in the commercialization and export of high-quality fresh fruits',
     'hero.cta': 'Discover Our Products',
     'hero.whatsapp': 'Request Quote',
+    'hero.guarantee': 'Fast response guaranteed',
     
     // Home - Introduction
     'home.intro.title': 'Quality and Commitment from Colombia to You',
