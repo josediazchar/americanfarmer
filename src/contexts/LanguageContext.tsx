@@ -85,12 +85,17 @@ const translations = {
     'values.collaboration.description': 'Trabajamos en equipo con productores y clientes para lograr objetivos comunes.',
     
     // Footer
+    'footer.description': 'Su socio de confianza en la comercialización y exportación de frutas frescas de alta calidad desde Colombia hacia el mundo.',
+    'footer.certifiedQuality': 'Calidad Certificada',
+    'footer.navigation': 'Navegación',
     'footer.contact': 'Contacto',
     'footer.email': 'Email',
     'footer.whatsapp': 'WhatsApp',
+    'footer.address': 'CR 107 #97-32 AP 202 PISO 2 Apartado, Colombia',
     'footer.links': 'Enlaces',
     'footer.social': 'Síguenos',
     'footer.rights': 'Todos los derechos reservados.',
+    'footer.madeInColombia': 'Hecho en Colombia',
     'footer.developed': 'Desarrollado con ❤️ para American Farmers',
     
     // Common
@@ -214,12 +219,17 @@ const translations = {
     'values.collaboration.description': 'We work as a team with producers and clients to achieve common goals.',
     
     // Footer
+    'footer.description': 'Your trusted partner in the commercialization and export of high-quality fresh fruits from Colombia to the world.',
+    'footer.certifiedQuality': 'Certified Quality',
+    'footer.navigation': 'Navigation',
     'footer.contact': 'Contact',
     'footer.email': 'Email',
     'footer.whatsapp': 'WhatsApp',
+    'footer.address': 'CR 107 #97-32 AP 202 PISO 2 Apartado, Colombia',
     'footer.links': 'Links',
     'footer.social': 'Follow Us',
     'footer.rights': 'All rights reserved.',
+    'footer.madeInColombia': 'Made in Colombia',
     'footer.developed': 'Developed with ❤️ for American Farmers',
     
     // Common
