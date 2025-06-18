@@ -4,21 +4,24 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import HomeSections from './HomeSections';
 import Footer from './Footer';
+import PageTransition from './PageTransition';
 
 const HomePage: React.FC = () => {
   return (
     <LanguageProvider>
-      <Navbar />
-      
-      <main>
-        {/* Hero Section */}
-        <Hero />
+      <PageTransition>
+        <Navbar />
         
-        {/* Home Sections with translations */}
-        <HomeSections />
-      </main>
-      
-      <Footer />
+        <main>
+          {/* Hero Section */}
+          <Hero />
+          
+          {/* Home Sections with translations */}
+          <HomeSections />
+        </main>
+        
+        <Footer />
+      </PageTransition>
     </LanguageProvider>
   );
 };

@@ -3,6 +3,10 @@ import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ProductCard from './ProductCard';
+import AnimatedSection from './AnimatedSection';
+import CounterAnimation from './CounterAnimation';
+import PageTransition from './PageTransition';
+import StatsCounter from './StatsCounter';
 
 const ProductsPageContent: React.FC = () => {
   const { language, t } = useLanguage();
@@ -52,7 +56,7 @@ const ProductsPageContent: React.FC = () => {
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{backgroundImage: "url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"}}></div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               {t('products.title')}
             </h1>
@@ -75,7 +79,7 @@ const ProductsPageContent: React.FC = () => {
                 <div className="text-yellow-100">{t('products.stats.support')}</div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </section>
 
         {/* Introduction Section */}
@@ -290,7 +294,9 @@ const ProductsPageContent: React.FC = () => {
 const ProductsPage: React.FC = () => {
   return (
     <LanguageProvider>
-      <ProductsPageContent />
+      <PageTransition>
+        <ProductsPageContent />
+      </PageTransition>
     </LanguageProvider>
   );
 };

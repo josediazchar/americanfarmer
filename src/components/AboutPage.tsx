@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import AnimatedSection from './AnimatedSection';
 import CounterAnimation from './CounterAnimation';
+import PageTransition from './PageTransition';
 
 const AboutPageContent: React.FC = () => {
   const { language, t } = useLanguage();
@@ -236,7 +237,9 @@ const AboutPageContent: React.FC = () => {
 const AboutPage: React.FC = () => {
   return (
     <LanguageProvider>
-      <AboutPageContent />
+      <PageTransition>
+        <AboutPageContent />
+      </PageTransition>
     </LanguageProvider>
   );
 };
