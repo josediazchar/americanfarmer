@@ -1,0 +1,50 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "American Farmers - Premium Colombian Fruit, Delivered to the World" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/american_farmers_logo" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="frutas colombianas, exportación frutas, banano premium, piña dorada, plátano hartón, lima tahití, frutas frescas Colombia">
+    <meta name="author" content="American Farmers">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="/american_farmers_logo">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content="/american_farmers_logo">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50">
+    <slot />
+    
+    <!-- Tailwind CSS Styles -->
+    <style>
+      @import '../styles/global.css';
+    </style>
+  </body>
+</html> 
