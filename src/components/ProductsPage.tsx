@@ -15,7 +15,7 @@ const ProductsPageContent: React.FC = () => {
     {
       name: t('products.banana.name'),
       description: t('products.banana.description'),
-      image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/banano_2.png",
       characteristics: t('products.banana.characteristics').split(','),
       scientificName: "Musa Acuminata",
       origin: "Colombia"
@@ -23,7 +23,7 @@ const ProductsPageContent: React.FC = () => {
     {
       name: t('products.plantain.name'),
       description: t('products.plantain.description'),
-      image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/platano_caja.png",
       characteristics: t('products.plantain.characteristics').split(','),
       scientificName: "Musa Paradisiaca",
       origin: "Colombia"
@@ -31,7 +31,7 @@ const ProductsPageContent: React.FC = () => {
     {
       name: t('products.pineapple.name'),
       description: t('products.pineapple.description'),
-      image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/pina_2.jpg",
       characteristics: t('products.pineapple.characteristics').split(','),
       scientificName: "Ananas Comosus",
       origin: "Colombia"
@@ -42,6 +42,14 @@ const ProductsPageContent: React.FC = () => {
       image: "https://img.lalr.co/cms/2024/11/15131405/11-770x510-1.jpg?w=728",
       characteristics: t('products.lime.characteristics').split(','),
       scientificName: "Citrus Latifolia",
+      origin: "Colombia"
+    },
+    {
+      name: t('products.fruitpulp.name'),
+      description: t('products.fruitpulp.description'),
+      image: "/pulpas.png",
+      characteristics: t('products.fruitpulp.characteristics').split(','),
+      scientificName: "Pulpa Natural",
       origin: "Colombia"
     }
   ];
@@ -67,7 +75,7 @@ const ProductsPageContent: React.FC = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-2xl font-bold text-white">8+</div>
+                <div className="text-2xl font-bold text-white">5+</div>
                 <div className="text-yellow-100">{t('products.stats.varieties')}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">

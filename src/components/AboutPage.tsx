@@ -60,7 +60,7 @@ const AboutPageContent: React.FC = () => {
               </AnimatedSection>
               <AnimatedSection animation="fadeInRight" delay={0.3} className="relative">
                 <img 
-                  src="https://www.infobae.com/resizer/v2/ARI2HGRTK5C2ZK3JWAN6UFYASM.jpg?auth=6cc2a35d525620981440dd350e94421766aaed47db05f983d2755dcca28b9241&smart=true&width=992&height=606&quality=85" 
+                  src="/nosotros.png" 
                   alt={language === 'es' ? 'Campos de frutas en Colombia' : 'Fruit fields in Colombia'}
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />

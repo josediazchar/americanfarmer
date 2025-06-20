@@ -31,6 +31,12 @@ const HomeSections: React.FC = () => {
       image: "/limon.png",
       scientificName: "Citrus Latifolia",
       origin: "Colombia"
+    },
+    {
+      id: 'fruitpulp',
+      image: "/pulpas.png",
+      scientificName: "Pulpa Natural",
+      origin: "Colombia"
     }
   ];
 
@@ -95,7 +101,7 @@ const HomeSections: React.FC = () => {
             </p>
           </AnimatedSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-8 mb-12">
             {featuredProducts.map((product, index) => (
               <AnimatedSection
                 key={product.id}
