@@ -67,7 +67,7 @@ const Hero = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                 >
-                  Premium
+                  de Primera Calidad
                 </motion.span>
                 <motion.span 
                   className="block"

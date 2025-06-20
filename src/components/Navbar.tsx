@@ -55,8 +55,9 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile Language Selector & Menu button */}
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageSelector />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-red-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
@@ -120,19 +121,16 @@ const Navbar = () => {
                 {t('nav.products')}
               </motion.a>
               <motion.div 
-                className="pt-2 space-y-2"
+                className="pt-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
               >
-                <div className="px-3">
-                  <LanguageSelector />
-                </div>
                 <motion.a 
                   href={whatsappUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="btn-whatsapp btn-enhanced w-full justify-center"
+                  className="btn-whatsapp btn-enhanced w-full justify-center mx-3"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

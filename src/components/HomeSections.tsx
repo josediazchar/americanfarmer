@@ -22,7 +22,7 @@ const HomeSections: React.FC = () => {
     },
     {
       id: 'plantain',
-      image: "/platano2.jpeg",
+      image: "/platano.png",
       scientificName: "Musa Paradisiaca",
       origin: "Colombia"
     },

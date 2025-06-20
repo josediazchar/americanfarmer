@@ -52,8 +52,8 @@ const translations = {
     'products.banana.characteristics': 'Sabor dulce y suave,Textura cremosa,Libre de fibras,Presentación fresca y firme',
     
     'products.pineapple.name': 'Piña',
-    'products.pineapple.description': 'Experimente la dulzura excepcional de nuestra Piña Dorada MD2. Con un nivel de brix superior a 12 en la cosecha, esta fruta es increíblemente jugosa con una textura tierna y brillante y un aroma fresco y afrutado.',
-    'products.pineapple.characteristics': 'Brix superior a 12,Increíblemente jugosa,Textura tierna y brillante,Aroma fresco y afrutado',
+    'products.pineapple.description': 'Experimente la dulzura excepcional de nuestra Piña. Esta fruta es increíblemente jugosa con una textura tierna y brillante y un aroma fresco y afrutado.',
+    'products.pineapple.characteristics': 'Increíblemente jugosa,Textura tierna y brillante,Aroma fresco y afrutado',
     
     'products.plantain.name': 'Plátano Hartón',
     'products.plantain.description': 'Un alimento básico versátil, nuestros Plátanos Hartón son conocidos por su textura firme y sabor sutilmente dulce. Perfectos para una variedad de usos culinarios, se cosechan frescos y están libres de imperfecciones.',
@@ -192,8 +192,8 @@ const translations = {
     'products.banana.characteristics': 'Sweet and smooth flavor,Creamy texture,Fiber-free,Fresh and firm presentation',
     
     'products.pineapple.name': 'Pineapple',
-    'products.pineapple.description': 'Experience the exceptional sweetness of our Pineapple. With a brix level superior to 12 at harvest, this fruit is incredibly juicy with a tender, bright texture and fresh, fruity aroma.',
-    'products.pineapple.characteristics': 'Brix superior to 12,Incredibly juicy,Tender and bright texture,Fresh and fruity aroma',
+    'products.pineapple.description': 'Experience the exceptional sweetness of our Pineapple. This fruit is incredibly juicy with a tender, bright texture and fresh, fruity aroma.',
+    'products.pineapple.characteristics': 'Tender and bright texture,Fresh and fruity aroma',
     
     'products.plantain.name': 'Hartón Plantain',
     'products.plantain.description': 'A versatile staple, our Hartón Plantains are known for their firm texture and subtly sweet flavor. Perfect for a variety of culinary uses, harvested fresh and free from imperfections.',
